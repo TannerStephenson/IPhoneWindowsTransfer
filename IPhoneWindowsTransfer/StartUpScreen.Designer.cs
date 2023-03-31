@@ -32,12 +32,12 @@ namespace IPhoneWindowsTransfer
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhotoTool));
 			this.RetryBtn = new System.Windows.Forms.Button();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.IphonePicture = new System.Windows.Forms.PictureBox();
 			this.PlsConnect = new System.Windows.Forms.Label();
 			this.ContinueBtn = new System.Windows.Forms.Button();
 			this.Status = new System.Windows.Forms.Label();
 			this.ConnectedDisconnected = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.IphonePicture)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// RetryBtn
@@ -51,16 +51,16 @@ namespace IPhoneWindowsTransfer
 			this.RetryBtn.UseVisualStyleBackColor = true;
 			this.RetryBtn.Click += new System.EventHandler(this.RetryBtn_Click);
 			// 
-			// pictureBox1
+			// IphonePicture
 			// 
-			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(313, 63);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(168, 268);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 2;
-			this.pictureBox1.TabStop = false;
-			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+			this.IphonePicture.Image = ((System.Drawing.Image)(resources.GetObject("IphonePicture.Image")));
+			this.IphonePicture.Location = new System.Drawing.Point(313, 63);
+			this.IphonePicture.Name = "IphonePicture";
+			this.IphonePicture.Size = new System.Drawing.Size(168, 268);
+			this.IphonePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.IphonePicture.TabIndex = 2;
+			this.IphonePicture.TabStop = false;
+			this.IphonePicture.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// PlsConnect
 			// 
@@ -112,11 +112,11 @@ namespace IPhoneWindowsTransfer
 			this.Controls.Add(this.Status);
 			this.Controls.Add(this.ContinueBtn);
 			this.Controls.Add(this.PlsConnect);
-			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.IphonePicture);
 			this.Controls.Add(this.RetryBtn);
 			this.Name = "PhotoTool";
 			this.Text = "IPhone to Windows Transfer Tool";
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.IphonePicture)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -129,7 +129,7 @@ namespace IPhoneWindowsTransfer
 
 		#endregion
 		private System.Windows.Forms.Button RetryBtn;
-		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox IphonePicture;
 		private System.Windows.Forms.Label PlsConnect;
 		private System.Windows.Forms.Button ContinueBtn;
 		private System.Windows.Forms.Label Status;
