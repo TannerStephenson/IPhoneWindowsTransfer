@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Management;
+using System.IO.Ports;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,7 @@ namespace IPhoneWindowsTransfer
 		public PhotoTool()
 		{
 			InitializeComponent();
-			ContinueBtn.Enabled = false;
+			ContinueBtn.Enabled = connected;
 		}
 
 		private void RetryBtn_Click(object sender, EventArgs e)
@@ -45,27 +46,23 @@ namespace IPhoneWindowsTransfer
 
 		public bool IsIPhoneConnected()
 		{
-			var query = "SELECT * FROM Win32_USBControllerDevice WHERE Dependent LIKE '%iPhone%' OR Dependent LIKE '%Portable Devices%'";
-			Console.WriteLine("Query: " + query);
+			bool isIPhoneConnected = false;
+			ManagementObjectCollection collection;
 
-			try
+			using (var searcher = new ManagementObjectSearcher(@"SELECT * FROM Win32_PnPEntity WHERE DeviceID LIKE '%USB\\VID_05AC&PID_12A8%'"))
+			collection = searcher.Get();
+
+			foreach (var device in collection)
 			{
-				var searcher = new ManagementObjectSearcher(query);
-				foreach (var device in searcher.Get())
+				var deviceID = (string)device.GetPropertyValue("DeviceID");
+				if (deviceID.Contains("USB\\VID_05AC&PID_12A8"))
 				{
-					var deviceName = (string)device.GetPropertyValue("Dependent");
-					if (deviceName.Contains("iPhone"))
-					{
-						return true;
-					}
+					isIPhoneConnected = true;
+					break;
 				}
 			}
-			catch (ManagementException ex)
-			{
-				Console.WriteLine("Error: " + ex.Message);
-			}
 
-			return false;
+			return isIPhoneConnected;
 		}
 
 	}
