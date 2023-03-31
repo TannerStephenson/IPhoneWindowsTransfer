@@ -8,3 +8,4 @@ C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTr
 C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\obj\Debug\IPhoneWindowsTransfer.csproj.CoreCompileInputs.cache
 C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\obj\Debug\IPhoneWindowsTransfer.exe
 C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\obj\Debug\IPhoneWindowsTransfer.pdb
+C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\obj\Debug\IPhoneWindowsTransfer.IphoneConnected.resources

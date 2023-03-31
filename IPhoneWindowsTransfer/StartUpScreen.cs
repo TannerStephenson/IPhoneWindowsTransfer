@@ -39,8 +39,15 @@ namespace IPhoneWindowsTransfer
 
 		private void ContinueBtn_Click(object sender, EventArgs e)
 		{
-			if (connected == false) {
+			if (connected == false)
+			{
 				ContinueBtn.Enabled = false;
+			}
+			else
+			{
+				IphoneConnected newForm = new IphoneConnected();
+				newForm.Show();
+				this.Hide();
 			}
 		}
 
