@@ -32,12 +32,14 @@ namespace IPhoneWindowsTransfer
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhotoTool));
 			this.RetryBtn = new System.Windows.Forms.Button();
-			this.IphonePicture = new System.Windows.Forms.PictureBox();
+			this.IphonePictureDisconnected = new System.Windows.Forms.PictureBox();
 			this.PlsConnect = new System.Windows.Forms.Label();
 			this.ContinueBtn = new System.Windows.Forms.Button();
 			this.Status = new System.Windows.Forms.Label();
 			this.ConnectedDisconnected = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)(this.IphonePicture)).BeginInit();
+			this.IphonePictureConnected = new System.Windows.Forms.PictureBox();
+			((System.ComponentModel.ISupportInitialize)(this.IphonePictureDisconnected)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.IphonePictureConnected)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// RetryBtn
@@ -51,16 +53,15 @@ namespace IPhoneWindowsTransfer
 			this.RetryBtn.UseVisualStyleBackColor = true;
 			this.RetryBtn.Click += new System.EventHandler(this.RetryBtn_Click);
 			// 
-			// IphonePicture
+			// IphonePictureDisconnected
 			// 
-			this.IphonePicture.Image = ((System.Drawing.Image)(resources.GetObject("IphonePicture.Image")));
-			this.IphonePicture.Location = new System.Drawing.Point(313, 63);
-			this.IphonePicture.Name = "IphonePicture";
-			this.IphonePicture.Size = new System.Drawing.Size(168, 268);
-			this.IphonePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.IphonePicture.TabIndex = 2;
-			this.IphonePicture.TabStop = false;
-			this.IphonePicture.Click += new System.EventHandler(this.pictureBox1_Click);
+			this.IphonePictureDisconnected.Image = ((System.Drawing.Image)(resources.GetObject("IphonePictureDisconnected.Image")));
+			this.IphonePictureDisconnected.Location = new System.Drawing.Point(313, 63);
+			this.IphonePictureDisconnected.Name = "IphonePictureDisconnected";
+			this.IphonePictureDisconnected.Size = new System.Drawing.Size(168, 268);
+			this.IphonePictureDisconnected.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.IphonePictureDisconnected.TabIndex = 2;
+			this.IphonePictureDisconnected.TabStop = false;
 			// 
 			// PlsConnect
 			// 
@@ -103,20 +104,32 @@ namespace IPhoneWindowsTransfer
 			this.ConnectedDisconnected.Text = "Disconnected";
 			this.ConnectedDisconnected.Click += new System.EventHandler(this.ConnectedDisconnected_Click);
 			// 
+			// IphonePictureConnected
+			// 
+			this.IphonePictureConnected.Image = global::IPhoneWindowsTransfer.Properties.Resources.connectedIphone;
+			this.IphonePictureConnected.Location = new System.Drawing.Point(313, 63);
+			this.IphonePictureConnected.Name = "IphonePictureConnected";
+			this.IphonePictureConnected.Size = new System.Drawing.Size(168, 268);
+			this.IphonePictureConnected.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.IphonePictureConnected.TabIndex = 7;
+			this.IphonePictureConnected.TabStop = false;
+			// 
 			// PhotoTool
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.IphonePictureConnected);
 			this.Controls.Add(this.ConnectedDisconnected);
 			this.Controls.Add(this.Status);
 			this.Controls.Add(this.ContinueBtn);
 			this.Controls.Add(this.PlsConnect);
-			this.Controls.Add(this.IphonePicture);
+			this.Controls.Add(this.IphonePictureDisconnected);
 			this.Controls.Add(this.RetryBtn);
 			this.Name = "PhotoTool";
 			this.Text = "IPhone to Windows Transfer Tool";
-			((System.ComponentModel.ISupportInitialize)(this.IphonePicture)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.IphonePictureDisconnected)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.IphonePictureConnected)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -129,11 +142,12 @@ namespace IPhoneWindowsTransfer
 
 		#endregion
 		private System.Windows.Forms.Button RetryBtn;
-		private System.Windows.Forms.PictureBox IphonePicture;
+		private System.Windows.Forms.PictureBox IphonePictureDisconnected;
 		private System.Windows.Forms.Label PlsConnect;
 		private System.Windows.Forms.Button ContinueBtn;
 		private System.Windows.Forms.Label Status;
 		private System.Windows.Forms.Label ConnectedDisconnected;
+		private System.Windows.Forms.PictureBox IphonePictureConnected;
 	}
 }
 
