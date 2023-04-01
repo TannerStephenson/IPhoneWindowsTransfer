@@ -128,6 +128,7 @@ namespace IPhoneWindowsTransfer
 			this.Controls.Add(this.RetryBtn);
 			this.Name = "PhotoTool";
 			this.Text = "IPhone to Windows Transfer Tool";
+			this.Load += new System.EventHandler(this.PhotoTool_Load);
 			((System.ComponentModel.ISupportInitialize)(this.IphonePictureDisconnected)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.IphonePictureConnected)).EndInit();
 			this.ResumeLayout(false);

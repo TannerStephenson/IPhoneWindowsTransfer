@@ -28,18 +28,23 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.button1 = new System.Windows.Forms.Button();
+			this.ChangeFolderBtn = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
+			this.CurPathDisplay = new System.Windows.Forms.Label();
+			this.CurrentPathLabel = new System.Windows.Forms.Label();
+			this.IphoneDisplay = new System.Windows.Forms.FlowLayoutPanel();
 			this.SuspendLayout();
 			// 
-			// button1
+			// ChangeFolderBtn
 			// 
-			this.button1.Location = new System.Drawing.Point(698, 565);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 0;
-			this.button1.Text = "button1";
-			this.button1.UseVisualStyleBackColor = true;
+			this.ChangeFolderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+			this.ChangeFolderBtn.Location = new System.Drawing.Point(12, 27);
+			this.ChangeFolderBtn.Name = "ChangeFolderBtn";
+			this.ChangeFolderBtn.Size = new System.Drawing.Size(106, 29);
+			this.ChangeFolderBtn.TabIndex = 0;
+			this.ChangeFolderBtn.Text = "Change Folders";
+			this.ChangeFolderBtn.UseVisualStyleBackColor = true;
+			this.ChangeFolderBtn.Click += new System.EventHandler(this.ChangeFolderBtn_Click);
 			// 
 			// button2
 			// 
@@ -50,22 +55,56 @@
 			this.button2.Text = "button2";
 			this.button2.UseVisualStyleBackColor = true;
 			// 
+			// CurPathDisplay
+			// 
+			this.CurPathDisplay.AutoSize = true;
+			this.CurPathDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+			this.CurPathDisplay.Location = new System.Drawing.Point(13, 9);
+			this.CurPathDisplay.Name = "CurPathDisplay";
+			this.CurPathDisplay.Size = new System.Drawing.Size(155, 15);
+			this.CurPathDisplay.TabIndex = 2;
+			this.CurPathDisplay.Text = "Current Path to Transfer to: ";
+			// 
+			// CurrentPathLabel
+			// 
+			this.CurrentPathLabel.AutoSize = true;
+			this.CurrentPathLabel.Location = new System.Drawing.Point(164, 11);
+			this.CurrentPathLabel.Name = "CurrentPathLabel";
+			this.CurrentPathLabel.Size = new System.Drawing.Size(35, 13);
+			this.CurrentPathLabel.TabIndex = 3;
+			this.CurrentPathLabel.Text = "label1";
+			// 
+			// IphoneDisplay
+			// 
+			this.IphoneDisplay.Location = new System.Drawing.Point(574, 27);
+			this.IphoneDisplay.Name = "IphoneDisplay";
+			this.IphoneDisplay.Size = new System.Drawing.Size(286, 569);
+			this.IphoneDisplay.TabIndex = 4;
+			// 
 			// IphoneConnected
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(888, 625);
+			this.Controls.Add(this.IphoneDisplay);
+			this.Controls.Add(this.CurrentPathLabel);
+			this.Controls.Add(this.CurPathDisplay);
 			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.ChangeFolderBtn);
 			this.Name = "IphoneConnected";
 			this.Text = "IphoneConnected";
+			this.Load += new System.EventHandler(this.IphoneConnected_Load);
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button ChangeFolderBtn;
 		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Label CurPathDisplay;
+		private System.Windows.Forms.Label CurrentPathLabel;
+		private System.Windows.Forms.FlowLayoutPanel IphoneDisplay;
 	}
 }

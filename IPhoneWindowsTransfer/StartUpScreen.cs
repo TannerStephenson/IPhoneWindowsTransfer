@@ -28,10 +28,12 @@ namespace IPhoneWindowsTransfer
 
 		private void RetryBtn_Click(object sender, EventArgs e)
 		{
-			if (connected == false) {
+			if (connected == false)
+			{
 				connected = IsIPhoneConnected();
 			}
-			if (connected == true){
+			if (connected == true)
+			{
 				ContinueBtn.Enabled = true;
 				ConnectedDisconnected.Text = "Connected";
 				IphonePictureDisconnected.Visible = false;
@@ -76,6 +78,10 @@ namespace IPhoneWindowsTransfer
 			return isIPhoneConnected;
 		}
 
+		private void PhotoTool_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 
 }
