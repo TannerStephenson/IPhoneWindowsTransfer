@@ -22,53 +22,72 @@ namespace IPhoneWindowsTransfer
 			CurrentPathLabel.Text = picturesFolder;
 		}
 
-		private void IphoneConnected_Load(object sender, EventArgs e)
-		{
-			// Find the iPhone connected to the computer
-			var searcher = new ManagementObjectSearcher(@"SELECT * FROM Win32_PnPEntity WHERE DeviceID LIKE '%USB\\VID_05AC&PID_12A8%'");
-			ManagementObjectCollection collection = searcher.Get();
 
-			string deviceId = "";
-			foreach (var device in collection)
-			{
-				deviceId = (string)device.GetPropertyValue("DeviceID");
-				if (deviceId.Contains("iPhone"))
-					break;
-				else
-					deviceId = "";
-			}
 
-			if (deviceId != "")
-			{
-				// Get the photos from the iPhone
-				var di = new DirectoryInfo(deviceId + "\\Internal Storage\\DCIM\\");
-				var folders = di.GetDirectories("*.apple");
-				List<string> photos = new List<string>();
-				foreach (var folder in folders)
-				{
-					var files = folder.GetFiles("*.jpg");
-					foreach (var file in files)
-					{
-						photos.Add(file.FullName);
-					}
-				}
+        private void IphoneConnected_Load(object sender, EventArgs e)
+        {
+            // Find the iPhone connected to the computer
+            var searcher = new ManagementObjectSearcher(@"SELECT * FROM Win32_PnPEntity WHERE DeviceID LIKE '%USB\\VID_05AC&PID_12A8%'");
+            ManagementObjectCollection collection = searcher.Get();
 
-				// Display the photos in a PictureBox control
-				foreach (var photo in photos)
-				{
-					var pb = new PictureBox();
-					pb.SizeMode = PictureBoxSizeMode.Zoom;
-					pb.Image = Image.FromFile(photo);
-					IphoneDisplay.Controls.Add(pb);
-				}
-			}
-			else
-			{
-				MessageBox.Show("No iPhone found.");
-			}
-		}
+            string deviceId = "";
+            foreach (var device in collection)
+            {
+                deviceId = (string)device.GetPropertyValue("DeviceID");
+                if (deviceId.Contains("iPhone"))
+                    break;
+                else
+                    deviceId = "";
+            }
 
-		private void ChangeFolderBtn_Click(object sender, EventArgs e)
+            if (deviceId != "")
+            {
+                // Get the photos from the iPhone
+                var di = new DirectoryInfo(deviceId + "\\Internal Storage\\DCIM\\");
+                var folders = di.GetDirectories("*.apple");
+                List<string> photos = new List<string>();
+                foreach (var folder in folders)
+                {
+                    var files = folder.GetFiles("*.jpg");
+                    foreach (var file in files)
+                    {
+                        photos.Add(file.FullName);
+                    }
+                }
+
+                // Display the photos in a PictureBox control
+                foreach (var photo in photos)
+                {
+                    var pb = new PictureBox();
+                    pb.SizeMode = PictureBoxSizeMode.Zoom;
+                    pb.Image = Image.FromFile(photo);
+                    IphoneDisplay.Controls.Add(pb);
+                }
+
+                // Clear any existing controls in the FlowLayoutPanel
+                CurrentDirectoryPanel.Controls.Clear();
+
+                // Get all image files in the specified folder
+                string[] imageFiles = Directory.GetFiles(picturesFolder, "*.jpg");
+
+                // Create a PictureBox control for each image file and add it to the FlowLayoutPanel
+                foreach (string imageFile in imageFiles)
+                {
+                    PictureBox pictureBox = new PictureBox();
+                    pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBox.Image = Image.FromFile(imageFile);
+                    CurrentDirectoryPanel.Controls.Add(pictureBox);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No iPhone found.");
+            }
+        }
+
+
+
+        private void ChangeFolderBtn_Click(object sender, EventArgs e)
 		{
 			FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
 			folderBrowserDialog.RootFolder = Environment.SpecialFolder.MyComputer;

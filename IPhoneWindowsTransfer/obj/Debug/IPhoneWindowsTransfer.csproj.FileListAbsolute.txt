@@ -1,7 +1,6 @@
 C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\bin\Debug\IPhoneWindowsTransfer.exe.config
 C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\bin\Debug\IPhoneWindowsTransfer.exe
 C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\bin\Debug\IPhoneWindowsTransfer.pdb
-C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\obj\Debug\IPhoneWindowsTransfer.csprojAssemblyReference.cache
 C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\obj\Debug\IPhoneWindowsTransfer.PhotoTool.resources
 C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\obj\Debug\IPhoneWindowsTransfer.Properties.Resources.resources
 C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\obj\Debug\IPhoneWindowsTransfer.csproj.GenerateResource.cache
@@ -9,3 +8,5 @@ C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTr
 C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\obj\Debug\IPhoneWindowsTransfer.exe
 C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\obj\Debug\IPhoneWindowsTransfer.pdb
 C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\obj\Debug\IPhoneWindowsTransfer.IphoneConnected.resources
+C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\obj\Debug\IPhoneWindowsTransfer.csproj.AssemblyReference.cache
+C:\Users\Tanner Stephenson\Documents\Visual Studio 2017\Projects\IPhoneWindowsTransfer\IPhoneWindowsTransfer\obj\Debug\IPhoneWindowsTransfer.csproj.SuggestedBindingRedirects.cache
