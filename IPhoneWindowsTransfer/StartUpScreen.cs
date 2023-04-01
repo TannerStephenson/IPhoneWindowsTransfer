@@ -9,16 +9,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Reflection;
 
 namespace IPhoneWindowsTransfer
 {
 	public partial class PhotoTool : Form
 	{
 		private bool connected = false;
+		
 		public PhotoTool()
 		{
 			InitializeComponent();
 			ContinueBtn.Enabled = connected;
+			IphonePictureConnected.Visible = false;
+			ContinueBtn.PerformClick();
 		}
 
 		private void RetryBtn_Click(object sender, EventArgs e)
@@ -29,13 +34,12 @@ namespace IPhoneWindowsTransfer
 			if (connected == true){
 				ContinueBtn.Enabled = true;
 				ConnectedDisconnected.Text = "Connected";
+				IphonePictureDisconnected.Visible = false;
+				IphonePictureConnected.Visible = true;
 			}
 		}
 
-		private void pictureBox1_Click(object sender, EventArgs e)
-		{
 
-		}
 
 		private void ContinueBtn_Click(object sender, EventArgs e)
 		{
