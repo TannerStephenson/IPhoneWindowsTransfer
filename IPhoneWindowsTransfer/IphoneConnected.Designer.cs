@@ -124,7 +124,7 @@
             this.CurrentDirectoryPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CurrentDirectoryPanel.Location = new System.Drawing.Point(18, 12);
             this.CurrentDirectoryPanel.Name = "CurrentDirectoryPanel";
-            this.CurrentDirectoryPanel.Size = new System.Drawing.Size(302, 404);
+            this.CurrentDirectoryPanel.Size = new System.Drawing.Size(222, 404);
             this.CurrentDirectoryPanel.TabIndex = 0;
             // 
             // IphoneConnected
