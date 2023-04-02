@@ -82,6 +82,13 @@ namespace IPhoneWindowsTransfer
 		{
 
 		}
-	}
+
+        private void TempBtn_Click(object sender, EventArgs e)
+        {
+            IphoneConnected newForm = new IphoneConnected();
+            newForm.Show();
+            this.Hide();
+        }
+    }
 
 }
