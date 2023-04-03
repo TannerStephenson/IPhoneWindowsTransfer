@@ -18,7 +18,10 @@ namespace IPhoneWindowsTransfer
 
 
 
-        //Add later radio button for deleting photos when done.
+        /* Add radio button for deleting photos when done.
+         * Shift current dir to the right-> 
+         * Graphic indicating we can only go from Iphone to computer and not vice versa?
+         */
 
 
 
@@ -46,6 +49,7 @@ namespace IPhoneWindowsTransfer
 
             // Get all image files in the specified folder
             string[] imageFiles = Directory.GetFiles(picturesFolder, "*.jpg");
+            // Use the array length for the max images to load.
 
             int maxImagesToLoad = 20;
             int numLoaded = 0;

@@ -71,7 +71,7 @@ namespace IPhoneWindowsTransfer
             this.PlsConnect.Name = "PlsConnect";
             this.PlsConnect.Size = new System.Drawing.Size(512, 31);
             this.PlsConnect.TabIndex = 3;
-            this.PlsConnect.Text = "Please connect your IPhone to your computer";
+            this.PlsConnect.Text = "Please connect your iPhone to your computer";
             // 
             // ContinueBtn
             // 
