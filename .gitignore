@@ -6,3 +6,5 @@
 *.vsidx
 .vs/IPhoneWindowsTransfer/v17/.wsuo
 .vs/VSWorkspaceState.json
+.vs/IPhoneWindowsTransfer/v17/.wsuo
+*.sqlite

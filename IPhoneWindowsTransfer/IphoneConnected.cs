@@ -39,7 +39,50 @@ namespace IPhoneWindowsTransfer
         private void IphoneConnected_Load(object sender, EventArgs e)
         {
             CurrentDirectoryLoadImgs();
+            iPhoneDirectoryLoad();
         }
+
+
+
+        //Loading directories here.
+
+
+        private void iPhoneDirectoryLoad() 
+        {
+            string iphoneDriveLetter = null;
+            foreach (DriveInfo drive in DriveInfo.GetDrives())
+            {
+                if (drive.DriveType == DriveType.Removable && drive.VolumeLabel == "Apple iPhone")
+                {
+                    iphoneDriveLetter = drive.RootDirectory.FullName;
+                    break;
+                }
+            }
+
+
+
+            if (iphoneDriveLetter != null)
+            {
+                string dcimFolderPath = Path.Combine(iphoneDriveLetter, "DCIM");
+
+                if (!Directory.Exists(dcimFolderPath)) return;
+
+                string[] directories = Directory.GetDirectories(dcimFolderPath);
+
+                // Create a Label control for each directory and add it to the FlowLayoutPanel
+                foreach (string directory in directories)
+                {
+                    Label label = new Label();
+                    label.Text = Path.GetFileName(directory);
+                    CurrentDirectoryPanel.Controls.Add(label);
+                }
+            }
+            
+
+        }
+
+
+
 
         private void CurrentDirectoryLoadImgs()
         {
